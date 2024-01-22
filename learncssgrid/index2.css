@@ -1,0 +1,102 @@
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr; /* set columns of same size */
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.testimonial:nth-child(1)
+{
+    grid-area: one;
+}
+.testimonial:nth-child(2)
+{
+    grid-area: two;
+}
+.testimonial:nth-child(3)
+{
+    grid-area: three;
+}
+.testimonial:nth-child(4)
+{
+    grid-area: four;
+}
+.testimonial:nth-child(5)
+{
+    grid-area: five;
+}
+@media (min-width:30em) {
+    .testimonial-grid{
+      grid-template-areas: 
+      'one one'
+      'two five'
+      'three five'
+      'four four';    
+    }
+  }
+@media (min-width:50em) {
+  .testimonial-grid{
+    grid-template-areas: 
+    'one one two five'
+    'three four four five';    
+  }
+}
+
+
+
+/* another section  */
+
+.sectiontest{
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'section_one'
+    'section_two'
+    'section_three'
+    'section_four'
+    'section_five';
+    /* min-height: 100vh;
+    background: red; */
+}
+.sectionitem:nth-child(1)
+{
+    grid-area:section_one;
+}
+.sectionitem:nth-child(2)
+{
+    grid-area:section_two;
+}
+.sectionitem:nth-child(3)
+{
+    grid-area:section_three;
+}
+.sectionitem:nth-child(4)
+{
+    grid-area:section_four;
+}
+
+@media (min-width:50em)
+{
+    /* .sectiontest{
+        grid-template-areas: 
+        'one two three'
+        'four four'
+        'five';
+        grid-template-areas: 
+        'one one two five'
+        'three four four five';  
+    } */
+    .sectiontest{
+        grid-template-areas: 
+        "... section_two ..."
+        "section_one section_two section_four"
+        "section_one section_three section_four"
+        "... section_three ...";
+    }
+}
